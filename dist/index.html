@@ -8,20 +8,72 @@
     <title>میهن وردپرس - وردپرس فارسی</title>
   </head>
   <body>
+    <!-- HEADING SECTION -->
     <header class="header container">
       <!-- left header -->
       <section class="header__right">
         <img class="header__right-logo" src="./images/logo.svg" alt="" />
+        <img id="menu" class="menu" src="./images/menu.svg" alt="" />
         <nav>
-          <ul class="header__right-list">
-            <li class="header__right-item">
-              <a href="#" class="header__right-link"> آموزش ها </a>
+          <ul class="header__right-list close" id="list">
+            <li class="header__right-item has-sub">
+              <p class="header__right-link">آموزش ها</p>
+              <ul class="header__right-sub-list">
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link"> آموزش وردپرس </a>
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link"> آموزش ووکامرس </a>
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link"> آموزش سئو </a>
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link">امنیت وردپرس</a>
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link"
+                    >آموزش طراحی سایت</a
+                  >
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link">رادیو وردپرس</a>
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link">تلویزیون وردپرس</a>
+                </li>
+              </ul>
             </li>
-            <li class="header__right-item">
-              <a href="#" class="header__right-link"> قالب ها </a>
+            <li class="header__right-item has-sub">
+              <p class="header__right-link">قالب ها</p>
+              <ul class="header__right-sub-list">
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link"
+                    >قالب وردپرس اهورا (پیشنهادی)</a
+                  >
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link"
+                    >قالب رایگان وردپرس</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li class="header__right-item">
-              <a href="#" class="header__right-link"> افزونه ها </a>
+            <li class="header__right-item has-sub">
+              <p class="header__right-link">افزونه ها</p>
+              <ul class="header__right-sub-list">
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link">میهن پنل</a>
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link">میهن تکت</a>
+                </li>
+                <li class="header__right-sub-item">
+                  <a href="#" class="header__right-sub-link"
+                    >افزودنی های ووکامرس</a
+                  >
+                </li>
+              </ul>
             </li>
             <li class="header__right-item">
               <a href="#" class="header__right-link">دوره جامع</a>
@@ -65,7 +117,49 @@
         </ul>
       </section>
     </header>
+    <!--MAIN-->
+    <main class="main container">
+      <!-- hero section -->
+      <section class="hero">
+        <section class="hero__right">
+          <img
+            class="header__right-img"
+            src="./images/hero.svg"
+            alt="hero-section-image"
+          />
+        </section>
+        <section class="hero__left">
+          <h1 class="hero__left-heading">
+            <span>
+              وردپرس فارسی
 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 500 150"
+                preserveAspectRatio="none"
+              >
+                <path d="M8.1,146.2c0,0,240.6-55.6,479-13.8"></path>
+              </svg>
+            </span>
+
+            به زبان ساده
+          </h1>
+          <p class="hero__left-para">
+            <span>
+              به <strong>میهن</strong> وردپرس خوش آمدید. اینجا یاد میگیرید چطور
+              سایت خود را با وردپرس راه اندازی کنید</span
+            >
+            <span> از اینجا شروع کنید... </span>
+          </p>
+          <section class="hero__left-btns">
+            <a href="#" class="hero__left-btn"> آموزش رایکان ساخت سایت </a>
+            <a href="#" class="hero__left-btn"> دوره جامع مدیریت سایت </a>
+          </section>
+        </section>
+      </section>
+    </main>
+    <!-- overlay -->
+    <div id="overlay"></div>
     <script src="./js/main.js"></script>
   </body>
 </html>

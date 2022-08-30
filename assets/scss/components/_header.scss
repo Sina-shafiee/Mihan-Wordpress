@@ -1,14 +1,13 @@
 @use "./../abstracts/" as *;
 
 .header {
-
-  box-shadow: #b9b9b967 0 0 10px 1px;
-  padding: 1rem;
+  box-shadow: 0 0 20px rgb(0 0 0 / 6%);
+  padding: 1.4rem 1.7rem;
   border-radius: 3rem;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // overflow: hidden;
 
   &__right {
     display: flex;
@@ -16,7 +15,7 @@
 
 
     &-logo {
-      width: 12rem;
+      width: 14rem;
       height: auto;
       margin-left: 1rem;
     }
@@ -24,10 +23,7 @@
     &-list {
       display: flex;
       list-style: none;
-    }
-
-    &:first-child {
-      margin-right: 2rem;
+      transition: transform .3s ease-in-out;
     }
 
     &-item {
@@ -39,8 +35,57 @@
 
     &-link {
       text-decoration: none;
+
+      &:hover {
+        color: $tertiary-col;
+      }
+    }
+
+    &-sub-list {
+      position: absolute;
+      top: 1.7rem;
+      right: -4rem;
+      width: max-content;
+      list-style: none;
+      background-image: linear-gradient(45deg, #403a82, #516b94);
+      background-color: #354ac4;
+      padding: 1rem 1rem 1rem 3rem;
+      border-radius: 1rem;
+      min-width: 8rem;
+      box-shadow: 0 10px 40px #403a82b8;
+      visibility: hidden;
+      opacity: 0;
+      transition: all .2s ease-in-out;
+
+      &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: #4e6391;
+        transform: rotate(45deg);
+        position: absolute;
+        top: -5px;
+        right: 4.7rem;
+      }
+    }
+
+    &-sub-item {
+      padding: .4rem 1rem;
+    }
+
+    &-sub-link {
+      text-decoration: none;
+      color: rgba(233, 221, 221, 0.795);
+      font-size: $font-sm;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-col;
+      }
     }
   }
+
+
 
   &__left {
     &-list {
@@ -50,11 +95,11 @@
 
     &-item {
       background-color: #FAF9FE;
-      width: 3rem;
+      width: 3.4rem;
+      height: 3.4rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 3rem;
       line-height: 0;
       border-radius: 100%;
 
@@ -67,14 +112,215 @@
       }
 
       &:not(:first-child) {
-        margin-right: 1rem;
+        margin-right: .4rem;
       }
     }
 
     &-icon {
-      width: 1.5rem;
+      width: 1.6rem;
       height: auto;
       fill: red;
     }
+
+
+  }
+
+
+}
+
+.has-sub {
+  position: relative;
+}
+
+.has-sub:hover .header__right-sub-list {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menu {
+  width: 2rem;
+  height: auto;
+  display: none;
+}
+
+// reponsive
+
+@media (max-width: 1480px) {
+  .header {
+    padding: 1.2rem 1.5rem;
+
+    &__right {
+      &-logo {
+        width: 12rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1025px) {
+  body {
+    position: relative;
+  }
+
+  .header {
+    position: static;
+    padding: 1rem 1.3rem;
+
+    &__right {
+      position: static;
+
+      &-logo {
+        width: 9rem;
+      }
+
+      &-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        min-width: 280px;
+        max-width: 70%;
+        background-color: $primary-col;
+        min-height: 100vh;
+        flex-direction: column;
+        white-space: nowrap;
+        z-index: 100;
+        backface-visibility: hidden;
+
+      }
+
+      &-item {
+        border-bottom: 1px solid $light-black-col ;
+        width: 90%;
+        padding: .8rem 2rem;
+        margin: 0 auto !important;
+      }
+
+      &-sub-list {
+        opacity: 1;
+        display: none;
+        visibility: visible;
+        position: static;
+        background-image: none;
+        background-color: unset;
+        box-shadow: none;
+
+        &::before {
+          display: none;
+        }
+
+      }
+
+      &-sub-link {
+        color: $medium-black-col;
+      }
+    }
+
+    &__left {
+      &-item {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      &-icon {
+        width: 1.6rem;
+      }
+    }
+  }
+
+
+
+  .has-sub:hover .header__right-sub-list {
+    display: block;
+  }
+
+  .has-sub:hover .header__right-sub-link {
+    color: $dark-black-col;
+  }
+
+  .open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .close {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(300px);
+  }
+
+  .menu {
+    display: block;
+    width: 1.6rem;
+  }
+
+  #overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    display: none;
+    backface-visibility: hidden;
+    background: rgba(0, 0, 0, 0.123);
+    backdrop-filter: blur(2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    // padding: rem 1.2rem;
+
+    &__right {
+      &-logo {
+        width: 7rem;
+        margin-left: .5rem;
+      }
+
+      &-sub-link {
+        font-size: $font-xs;
+      }
+    }
+
+
+
+    .menu {
+      width: 1.2rem;
+    }
+
+    &__left {
+
+      &-item {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      &-icon {
+        width: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width:640px) {
+  .header {
+    &__Right {}
+
+    &__left {
+      &-item {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      &-icon {
+        width: 1.1rem;
+      }
+    }
+  }
+
+  .menu {
+    width: 1.1rem;
   }
 }

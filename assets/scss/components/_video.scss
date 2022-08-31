@@ -12,7 +12,12 @@
             &>h2 {
                 margin-bottom: .4rem;
             }
+
+            &>p {
+                color: $medium-black-col;
+            }
         }
+
 
         &-left {
             &>a {

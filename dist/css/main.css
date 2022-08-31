@@ -733,6 +733,7 @@ a {
 }
 .hero__left-para {
   margin: 1rem 0;
+  color: #624830;
 }
 .hero__left-para > span {
   display: block;
@@ -826,6 +827,9 @@ a {
 .video__head-right > h2 {
   margin-bottom: 0.4rem;
 }
+.video__head-right > p {
+  color: #624830;
+}
 .video__head-left > a {
   padding: 1rem 1rem;
   display: inline-block;
@@ -877,6 +881,106 @@ a {
   z-index: 1;
   transition-duration: 0.2s;
   background-image: url("../images/play.svg");
+}
+
+.featured {
+  margin-top: 4rem;
+  background-color: #e9ecef;
+  position: relative;
+  padding: 2rem;
+}
+.featured::before {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  line-height: 0;
+  border-radius: 22rem;
+  background: #2a9d8f;
+  background-image: linear-gradient(45deg, #2a9d8f, #8c9d2a);
+  z-index: 1;
+}
+.featured__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featured__head-heading {
+  margin-bottom: 1rem;
+}
+.featured__head-para {
+  color: #624830;
+}
+.featured__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 1rem;
+}
+.featured__body-right {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.featured__body-right-article {
+  margin: 2rem;
+}
+.featured__body-right-article > h3 {
+  margin-bottom: 0.7rem;
+}
+.featured__body-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+.featured__body-left > img {
+  width: 100%;
+}
+.featured__body-left > a {
+  margin: 1.2rem 0;
+  padding: 0.8rem 1.4rem;
+  text-decoration: none;
+  border-radius: 2rem;
+  background-color: #FFC63E;
+}
+.featured::after {
+  content: "";
+  position: absolute;
+  bottom: -2.5rem;
+  right: -2.5rem;
+  line-height: 0;
+  border-radius: 90%;
+  width: 5rem;
+  height: 5rem;
+  background: #e76f51;
+  background-image: linear-gradient(45deg, #e76f51, #e7da51);
+}
+
+@media (max-width: 768px) {
+  .featured__body {
+    flex-direction: column;
+  }
+  .featured::before {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .featured::after {
+    content: "";
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    width: 4rem;
+    height: 4rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

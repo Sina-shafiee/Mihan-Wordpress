@@ -1,0 +1,117 @@
+@use "./../abstracts/" as *;
+
+.featured {
+    margin-top: 4rem;
+    background-color: $light-black-col;
+    position: relative;
+    padding: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -2.5rem;
+        left: 2rem;
+        width: 5rem;
+        height: 5rem;
+        line-height: 0;
+        border-radius: 22rem;
+        background: #2a9d8f;
+        background-image: linear-gradient(45deg, #2a9d8f, #8c9d2a);
+        z-index: 1;
+    }
+
+    &__head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-heading {
+            margin-bottom: 1rem;
+        }
+
+        &-para {
+            color: $medium-black-col;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        gap: 1rem;
+
+        &-right {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            &-article {
+                margin: 2rem;
+
+                &>h3 {
+                    margin-bottom: .7rem;
+                }
+            }
+        }
+
+        &-left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+
+            &>img {
+                width: 100%;
+            }
+
+            &>a {
+                margin: 1.2rem 0;
+                padding: .8rem 1.4rem;
+                text-decoration: none;
+                border-radius: 2rem;
+                background-color: #FFC63E;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -2.5rem;
+        right: -2.5rem;
+        line-height: 0;
+        border-radius: 90%;
+        width: 5rem;
+        height: 5rem;
+        background: #e76f51;
+        background-image: linear-gradient(45deg, #e76f51, #e7da51);
+    }
+}
+
+@media (max-width: 768px) {
+    .featured {
+        &__body {
+            flex-direction: column;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -2rem;
+            left: 2rem;
+            width: 4rem;
+            height: 4rem;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -2rem;
+            right: -2rem;
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}

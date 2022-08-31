@@ -1,16 +1,13 @@
 @use "./../abstracts/" as *;
 
-.main {
-    background-color: #F9EACE;
-    border-radius: 2rem;
-    box-shadow: 0 0 20px rgb(0 0 0 / 6%);
-}
-
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    background-color: #F9EACE;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px rgb(0 0 0 / 6%);
 
     &__right {
         width: 49%;

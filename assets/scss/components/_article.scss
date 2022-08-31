@@ -1,23 +1,18 @@
 @use "./../abstracts/" as *;
 
-.video {
-    margin-top: 2rem;
-
+.article {
     &__head {
         display: flex;
         align-items: center;
         justify-content: space-between;
 
         &-right {
-            &>h2 {
-                margin-bottom: .4rem;
-            }
 
             &>p {
+                padding: 1rem 0;
                 color: $medium-black-col;
             }
         }
-
 
         &-left {
             &>a {
@@ -41,52 +36,35 @@
         align-items: center;
         gap: 2rem;
 
-        &-card {
-            position: relative;
+        &-article {
+            border-radius: 1rem;
+            border: 1px solid $light-black-col;
+            // overflow: hidden;
+            padding: 1rem;
+            // width: 90%;
+            flex: 0 0 300px;
             max-width: 90%;
             border-radius: 1rem;
             overflow: hidden;
             flex: 0 0 380px;
 
-            &-link {
-                text-decoration: none;
-                z-index: 1;
-
-                &:hover>span {
-                    transform: translate(-50%, -50%) scale(1.2);
-                    backdrop-filter: opacity(0.49);
-                    opacity: 1;
-                }
+            &:hover {
+                box-shadow: 0 0 20px rgb(0 0 0 / 6%);
             }
 
-            &-span {
+            &-image {
                 width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(1);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: 71px;
-                transition-duration: 0.2s;
-                transition-property: transform;
-                opacity: .5;
-                backface-visibility: hidden;
-                z-index: 1;
-                transition-duration: .2s;
-                background-image: url('../images/play.svg');
+                height: auto;
             }
         }
     }
 }
 
 @media (max-width:420px) {
-    .video {
+    .article {
         &__head {
             display: flex;
             flex-direction: column;
-            gap: .4rem;
 
             &-left {
                 align-self: end;

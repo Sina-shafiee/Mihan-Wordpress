@@ -1,13 +1,21 @@
 @use "./../abstracts/" as *;
 
+.header-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 39;
+}
+
 .header {
   box-shadow: 0 0 20px rgb(0 0 0 / 6%);
   padding: 1.4rem 1.7rem;
   border-radius: 3rem;
+  background-color: #fcfcfc;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // overflow: hidden;
 
   &__right {
     display: flex;
@@ -261,7 +269,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 50;
+    z-index: 30;
     display: none;
     backface-visibility: hidden;
     background: rgba(0, 0, 0, 0.123);
@@ -306,7 +314,6 @@
 
 @media (max-width:640px) {
   .header {
-    &__Right {}
 
     &__left {
       &-item {

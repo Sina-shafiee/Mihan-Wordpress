@@ -1,3 +1,3 @@
 # Mihan-Wordpress
 
-> mihanwp.com template clone 
+ mihanwp.com template clone 

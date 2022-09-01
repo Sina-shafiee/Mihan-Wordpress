@@ -1,11 +1,6 @@
 @use "./../abstracts/" as *;
 
-.header-container {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 39;
-}
+
 
 .header {
   box-shadow: 0 0 20px rgb(0 0 0 / 6%);
@@ -278,8 +273,8 @@
 }
 
 @media (max-width: 768px) {
+
   .header {
-    // padding: rem 1.2rem;
 
     &__right {
       &-logo {

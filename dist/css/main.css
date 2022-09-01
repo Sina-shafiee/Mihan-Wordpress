@@ -457,13 +457,6 @@ a {
     font-size: 0.9rem;
   }
 }
-.header-container {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 39;
-}
-
 .header {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
   padding: 1.4rem 1.7rem;
@@ -1179,6 +1172,108 @@ a {
 .plugins__article-title {
   text-decoration: none;
   text-align: center;
+}
+
+.footer__head {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 200;
+  flex-wrap: wrap;
+}
+.footer__head-story {
+  flex: 0 0 320px;
+}
+.footer__head-story > h4 {
+  margin-bottom: 1rem;
+}
+.footer__head-story > a {
+  display: inline-block;
+  padding: 1rem 0;
+  color: #4b5fd4;
+  text-decoration: none;
+}
+.footer__head-trust {
+  flex: 0 0 320px;
+}
+.footer__head-trust > h4 {
+  margin-bottom: 1rem;
+}
+.footer__head-trust > a {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2rem;
+  background-color: #ffc841;
+  text-decoration: none;
+  margin-top: 0.4rem;
+}
+.footer__head-social {
+  flex: 0 0 320px;
+  max-width: 98%;
+}
+.footer__head-social > h4 {
+  margin-bottom: 1rem;
+}
+.footer__head-icon {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer__head-icon-youtube, .footer__head-icon-instagram, .footer__head-icon-telegram {
+  box-shadow: rgba(253, 53, 53, 0.3764705882) 0 7px 30px;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  justify-content: center;
+}
+.footer__head-icon-youtube > img, .footer__head-icon-instagram > img, .footer__head-icon-telegram > img {
+  width: 48px;
+  height: 48px;
+}
+.footer__head-icon-youtube {
+  background-color: #fd3535;
+  background-image: linear-gradient(120deg, #fd7478, #fd3535);
+}
+.footer__head-icon-instagram {
+  background-color: #E96791;
+  background-image: linear-gradient(120deg, #F47778, #E96791);
+}
+.footer__head-icon-telegram {
+  background-color: #0391ff;
+  background-image: linear-gradient(120deg, #03c1ff, #0391ff);
+}
+.footer__bottom {
+  margin-top: 1rem;
+}
+.footer__bottom > ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 200;
+}
+.footer__bottom > ul > li:hover > a {
+  background-color: #e9ecef;
+}
+.footer__bottom a {
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  display: inline-block;
+}
+.footer__bottom-copyright {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
 }
 
 /*# sourceMappingURL=main.css.map */

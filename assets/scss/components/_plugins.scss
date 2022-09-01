@@ -1,0 +1,154 @@
+@use "./../abstracts/" as *;
+
+.plugins {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: .7rem;
+    overflow: hidden;
+
+    &__article {
+        padding: 1rem 0;
+        border: 1px solid $light-black-col;
+        border-radius: 1rem;
+        flex: 0 0 190px;
+        max-width: 190px;
+
+
+        &>a {
+            text-decoration: none;
+        }
+
+        &:hover {
+            box-shadow: 0 0 20px rgb(0 0 0 / 6%);
+        }
+
+        .div-1 {
+            background-image: url(../images/normal-blob-1.svg);
+            background-position: center;
+            background-size: cover;
+            overflow: visible;
+        }
+
+
+        &:hover .div-1 {
+            background-image: url(../images/hover-blob-1.svg);
+            fill: #FF0066;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: visible;
+        }
+
+        .div-2 {
+            background-image: url(../images/normal-blob-2.svg);
+            background-position: center;
+            background-size: cover;
+            overflow: visible;
+        }
+
+
+        &:hover .div-2 {
+            background-image: url(../images/hover-blob-2.svg);
+            fill: #FF0066;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: visible;
+        }
+
+        .div-3 {
+            background-image: url(../images/normal-blob-3.svg);
+            background-position: center;
+            background-size: cover;
+            overflow: visible;
+        }
+
+
+        &:hover .div-3 {
+            background-image: url(../images/hover-blob-3.svg);
+            fill: #FF0066;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: visible;
+        }
+
+        .div-4 {
+            background-image: url(../images/normal-blob-4.svg);
+            background-position: center;
+            background-size: cover;
+            overflow: visible;
+        }
+
+
+        &:hover .div-4 {
+            background-image: url(../images/hover-blob-4.svg);
+            fill: #FF0066;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: visible;
+        }
+
+        .div-44 {
+            background-image: url(../images/normal-blob-44.svg);
+            background-position: center;
+            background-size: cover;
+            overflow: visible;
+        }
+
+
+        &:hover .div-44 {
+            background-image: url(../images/hover-blob-44.svg);
+            fill: #FF0066;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: visible;
+        }
+
+        .div-444 {
+            background-image: url(../images/normal-blob-444.svg);
+            background-position: center;
+            background-size: cover;
+            overflow: visible;
+        }
+
+
+        &:hover .div-444 {
+            background-image: url(../images/hover-blob-444.svg);
+            fill: #FF0066;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            overflow: visible;
+        }
+
+        &-div {
+
+            width: 100%;
+            height: 100%;
+            padding-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            backdrop-filter: unset;
+            transition: 0s ease-out;
+
+
+        }
+
+        &-img {
+            width: 60%;
+            height: 60%;
+        }
+
+        &-title {
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+}

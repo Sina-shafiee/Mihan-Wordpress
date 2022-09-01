@@ -1,0 +1,158 @@
+@use "./../abstracts/" as *;
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: #F9EACE;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px rgb(0 0 0 / 6%);
+
+    &__right {
+        width: 49%;
+
+        &-img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__left {
+        padding: 0 2rem;
+
+        &-heading {
+
+            &>span {
+                position: relative;
+                z-index: 1;
+
+                &>svg {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 17rem;
+                    height: 4rem;
+                    overflow: visible;
+                    z-index: -1;
+                    fill: $secondary-col;
+                }
+            }
+        }
+
+        &-para {
+            margin: 1rem 0;
+            color: $medium-black-col;
+
+            &>span {
+                display: block;
+            }
+        }
+
+        &-btns {
+            margin: 1rem 0;
+            display: flex;
+            width: 90%;
+            gap: 1rem;
+        }
+
+        &-btn {
+            padding: 1rem 1rem;
+            display: inline-block;
+            width: max-content;
+            text-decoration: none;
+            border-radius: 2rem;
+            box-shadow: 0 0 20px rgb(0 0 0 / 6%);
+
+            &:first-child {
+                background-color: white;
+            }
+
+            &:not(:first-child) {
+                background-color: $secondary-col;
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero {
+        &__left {
+            &-heading {
+                margin-top: 2rem;
+            }
+
+            &-para {
+                margin: 3rem 0;
+            }
+
+            &-btns {
+                flex-direction: column;
+            }
+
+            &-btn {
+                display: inline-block;
+                text-decoration: none;
+                border-radius: 2rem;
+
+                &:first-child {
+                    background-color: white;
+                }
+
+                &:not(:first-child) {
+                    background-color: $secondary-col;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+
+        &__right {
+            width: 90%;
+        }
+
+        &__left {
+            width: 100%;
+            text-align: center;
+
+            &-heading {
+                margin-top: 0;
+
+                &>span>svg {
+                    width: 12rem;
+                    height: 2rem;
+                }
+            }
+
+            &-btns {
+                gap: .7rem;
+            }
+
+            &-para {
+                text-align: right;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .hero {
+        &__left {
+            &_btns {
+                width: fit-content;
+                margin: 1rem auto;
+            }
+
+            &-btn {
+                padding: .5rem .7rem;
+            }
+        }
+    }
+}

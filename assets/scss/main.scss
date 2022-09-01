@@ -1,0 +1,11 @@
+// importing abstracts
+@use "./abstracts" as *;
+
+// importing componnents
+@use "./components/header";
+@use "./components/hero";
+@use "./components/video";
+@use "./components/featured";
+@use "./components/article";
+@use "./components/plugins";
+@use "./components/footer";

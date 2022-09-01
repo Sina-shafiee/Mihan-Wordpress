@@ -1,0 +1,97 @@
+@use "./../abstracts/" as *;
+
+.video {
+    margin-top: 2rem;
+
+    &__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-right {
+            &>h2 {
+                margin-bottom: .4rem;
+            }
+
+            &>p {
+                color: $medium-black-col;
+            }
+        }
+
+
+        &-left {
+            &>a {
+                padding: 1rem 1rem;
+                display: inline-block;
+                text-decoration: none;
+                color: $light-black-col;
+                box-shadow: 0 0 20px rgb(0 0 0 / 6%);
+                background: #354ac4;
+                background-image: linear-gradient(45deg, #354ac4, #7789f6);
+                border-radius: 2rem;
+            }
+        }
+    }
+
+    &__body {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        &-card {
+            position: relative;
+            max-width: 90%;
+            border-radius: 1rem;
+            overflow: hidden;
+            flex: 0 0 380px;
+
+            &-link {
+                text-decoration: none;
+                z-index: 1;
+
+                &:hover>span {
+                    transform: translate(-50%, -50%) scale(1.2);
+                    backdrop-filter: opacity(0.49);
+                    opacity: 1;
+                }
+            }
+
+            &-span {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(1);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 71px;
+                transition-duration: 0.2s;
+                transition-property: transform;
+                opacity: .5;
+                backface-visibility: hidden;
+                z-index: 1;
+                transition-duration: .2s;
+                background-image: url('../images/play.svg');
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .video {
+        &__head {
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+
+            &-left {
+                align-self: end;
+            }
+        }
+
+    }
+}

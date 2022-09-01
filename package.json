@@ -1,0 +1,20 @@
+{
+  "name": "mihan-wordpress",
+  "version": "1.0.0",
+  "description": "mihanwp.com clone using sass",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass ./assets/scss:./dist/css/ --watch",
+    "live": "live-server ./dist"
+  },
+  "author": "Sina Shafiee",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.54.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0"
+  }
+}
